@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wraper">
     <h2>2-1 vue项目搭建</h2>
     <van-button @click="getData">第一次使用axios</van-button>
   </div>

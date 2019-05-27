@@ -13,15 +13,20 @@
   color: #2c3e50;
 }
 .nav {
-  padding: 30px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px;
+  font-size: 24px;
 }
 
 .nav a {
   font-weight: bold;
   color: #2c3e50;
+  margin-top: 20px;
 }
 
-.nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

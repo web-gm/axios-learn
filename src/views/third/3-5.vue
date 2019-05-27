@@ -1,15 +1,19 @@
 <template>
   <div>
-    <h2>3-4 取消请求</h2>
-    <button @click="getLongtime()">请求数据</button>
-    <button @click="cancelGet()">取消请求</button>
+    <h2>3-5 取消请求</h2>
+    <van-button type="info" @click="getLongtime()">请求数据</van-button>
+    <van-button type="danger" @click="cancelGet()">取消请求</van-button>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import {Button} from 'vant'
 export default {
-  name: "axios3_4",
+  name: "axios3_5",
+  components:{
+    [Button.name]:Button
+  },
   created() {
     let CancelToken = axios.CancelToken;
     this.source = CancelToken.source();

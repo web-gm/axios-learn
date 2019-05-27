@@ -1,15 +1,19 @@
 <template>
   <div>
     <h2>3-3 拦截器</h2>
-    <button @click="getData()">请求拦截</button>
-    <button @click="cancelInterceptores()">取消拦截</button>
+    <van-button type="info" @click="getData()">请求拦截</van-button>
+    <van-button type="danger" @click="cancelInterceptores()">取消拦截</van-button>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import {Button} from 'vant'
 export default {
   name: "axios3_3",
+  components:{
+    [Button.name]:Button
+  },
   created() {
     // 举例 请求拦截器添加自定义headers
     this.instance = axios.create();
