@@ -68,7 +68,10 @@ export default {
 
     currentContact() {
       const id = this.chosenContactId;
-      return id !== null ? this.list.filter(item => item.id === id)[0] : {};
+      return id !== null ? this.list.filter(item => item.id === id)[0] : {
+        name: '',
+        tel: ''
+      };
     }
   },
 
@@ -91,6 +94,7 @@ export default {
     onAdd() {
       this.isEdit = false;
       this.showEdit = true;
+      this.editingContact = {}
     },
 
     // 编辑联系人
@@ -174,7 +178,11 @@ export default {
       if (this.chosenContactId === info.id) {
         this.chosenContactId = null;
       }
-      axios.delete('http://localhost:9000/api/contact/'+info.id)
+      axios.delete('http://localhost:9000/api/contact',{
+        data:{
+          id: info.id
+        }
+      })
         .then(function (response) {
             if(response.data.code === 200){
               Toast('删除成功')

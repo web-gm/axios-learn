@@ -22,7 +22,7 @@ const contactApi = {
   // 删除联系人
   delContact: {
     method: 'delete',
-    url: 'contact/'
+    url: 'contact'
   },
 }
 export default contactApi
