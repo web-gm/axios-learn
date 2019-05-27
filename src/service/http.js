@@ -50,6 +50,12 @@ for (let i in services) {
         } catch (e) {
           response = e.response
         }
+      }else if (api.method === 'delete') {
+        try {
+          response = await itAxios[api.method](serviceHost + apiUrl, {...config,data})
+        } catch (e) {
+          response = e.response
+        }
       }else{
         config.params = newParams
         try {

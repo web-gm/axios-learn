@@ -66,7 +66,10 @@ export default {
 
     currentContact() {
       const id = this.chosenContactId;
-      return id !== null ? this.list.filter(item => item.id === id)[0] : {};
+      return id !== null ? this.list.filter(item => item.id === id)[0] : {
+        name: '',
+        tel: ''
+      };
     }
   },
 
@@ -84,6 +87,7 @@ export default {
     onAdd() {
       this.isEdit = false;
       this.showEdit = true;
+      this.editingContact = {}
     },
 
     // 编辑联系人
@@ -153,7 +157,7 @@ export default {
         {
           id:info.id
         },
-        true
+        false
       )
       Toast.clear()
       console.log(res)
