@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -9,67 +10,35 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      redirect: '/home'
+      component: Home
     },
     {
-      path: '/home',
-      name: 'home',
-      component: () => import('./views/Home.vue')
+      path: '/about',
+      name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
-      path: '/second',
-      name: 'second',
-      component: () => import('./views/second/index.vue')
+      path:'/2-2',
+      name:'axios请求方法',
+      component:()=> import('./views/2-2.vue')
     },
     {
-      path: '/second/1',
-      name: 'axios2-1',
-      component: () => import('./views/second/2-1.vue')
+      path:'/2-3',
+      name:'axios并发请求',
+      component:()=> import('./views/2-3.vue')
     },
     {
-      path: '/second/2',
-      name: 'axios2-2',
-      component: () => import('./views/second/2-2.vue')
+      path:'/demoList',
+      name:'联系人列表样例',
+      component:()=> import('./views/DemoContact.vue')
     },
     {
-      path: '/second/3',
-      name: 'axios2-3',
-      component: () => import('./views/second/2-3.vue')
-    },
-    {
-      path: '/third',
-      name: 'axios3',
-      component: () => import( './views/third/index.vue')
-    },
-    {
-      path: '/third/1',
-      name: 'axios3-1',
-      component: () => import( './views/third/3-1.vue')
-    },
-    {
-      path: '/third/2',
-      name: 'axios3-2',
-      component: () => import( './views/third/3-2.vue')
-    },
-    {
-      path: '/third/3',
-      name: 'axios3-3',
-      component: () => import( './views/third/3-3.vue')
-    },
-    {
-      path: '/third/4',
-      name: 'axios3-4',
-      component: () => import( './views/third/3-4.vue')
-    },
-    {
-      path: '/third/5',
-      name: 'axios3-5',
-      component: () => import( './views/third/3-5.vue')
-    },
-    {
-      path: '/fouth',
-      name: 'fouth',
-      component: () => import(/* webpackChunkName: "about" */ './views/Fouth.vue')
+      path:'/contactList',
+      name:'联系人列表',
+      component:()=> import('./views/ContactList.vue')
     }
   ]
 })

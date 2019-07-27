@@ -1,4 +1,4 @@
-# vue-axios1
+# axios-vue
 
 ## Project setup
 ```

@@ -1,10 +1,13 @@
 <template>
   <div id="app">
+    <div id="nav">
+      
+    </div>
     <router-view/>
   </div>
 </template>
 
-<style>
+<style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12,21 +15,14 @@
   text-align: center;
   color: #2c3e50;
 }
-.nav {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 50px;
-  font-size: 24px;
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
-
-.nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  margin-top: 20px;
-}
-
 </style>

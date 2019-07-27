@@ -1,5 +1,5 @@
 {
-  "name": "vue-axios1",
+  "name": "axios-vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,21 +8,22 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "babel-plugin-import": "^1.11.2",
+    "axios": "^0.19.0",
+    "babel-plugin-import": "^1.12.0",
     "core-js": "^2.6.5",
-    "qs": "^6.7.0",
-    "vant": "^1.6.19",
+    "vant": "^2.0.9",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21"
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }

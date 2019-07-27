@@ -1,14 +1,23 @@
 <template>
-  <div id="home">
-    <div class="nav">
-      <router-link to="/second">第二章 axios基础方法</router-link>
-      <router-link to="/third">第三章 axios进阶方法</router-link> 
-      <router-link to="/fouth">第四章 axios的封装</router-link>
-    </div>
-    <router-view/>
+  <div class="home">
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
-<style>
-
-</style>
+<script>
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'
+import axios from 'axios'
+export default {
+  name: 'home',
+  components: {
+    HelloWorld
+  },
+  created() {
+    axios.get('/data.json').then((res)=>{
+      console.log(res)
+    })
+  },
+}
+</script>
